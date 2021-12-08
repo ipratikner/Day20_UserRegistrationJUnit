@@ -38,13 +38,32 @@ public class UserRegistrationTest {
         Assertions.assertFalse(result);
     }
     @Test
-    public void giveLoginValue_WhenProper_ShouldReturnTrue(){
-        boolean result = userRegistration.loginValidation("Asbmsopnm");
+    public void giveLoginRule1Value_WhenProper_ShouldReturnTrue(){
+        boolean result = userRegistration.loginRule1Validation("agnnfwqopn");
         Assertions.assertTrue(result);
     }
     @Test
-    public void givenLoginValues_WhenNotProper_ShouldReturnFalse() {
-        boolean result = userRegistration.loginValidation("asjseropnm");
+    public void givenLoginRule1Values_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userRegistration.loginRule1Validation("aqropnm");
+        Assertions.assertFalse(result);
+    }
+    @Test
+    public void givenRule2Value_WhenProper_ShouldReturnTrue(){
+        boolean result = userRegistration.loginRule2Validation("Logaqaaopnm");
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void givenRule2Values_WhenNotProper_ShouldReturnFalse(){
+        boolean result = userRegistration.loginRule2Validation("addqeghopnm");
+    }
+    @Test
+    public void givenRule3Value_WhenProper_ShouldReturnTrue(){
+        boolean result = userRegistration.loginRule3Validation("Laoqo1rpnm");
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void givenRule3Values_WhenNotProper_ShouldReturnFalse(){
+        boolean result = userRegistration.loginRule3Validation("aqLawhrpnm");
         Assertions.assertFalse(result);
     }
 }
